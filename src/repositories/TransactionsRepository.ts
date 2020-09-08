@@ -30,7 +30,14 @@ class TransactionsRepository {
         case "income":
           accumulator.income += transaction.value;
           break;
+        case "outcome":
+          accumulator.outcome += transaction.value;
+          break;
+        default:
+          break;
       }
+
+      return accumulator;
     }, {
       income: 0,
       outcome: 0,
